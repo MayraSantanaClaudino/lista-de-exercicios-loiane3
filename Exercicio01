@@ -1,0 +1,29 @@
+//Uma nota de 0 a 10
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		boolean notaValida = false;
+		
+		do {
+		    
+		    System.out.println("Informe um número de 0 a 10: ");
+		    double nota = scan.nextDouble();
+		    
+		    if (nota >= 0 && nota <= 10){
+		        notaValida = true;
+		    System.out.println("A nota informada foi: " + nota);
+		} else {
+		    System.out.println("Nota inválida, informe outra nota: ");
+		}
+		    
+	  } while (!notaValida);
+		
+	}
+}

@@ -1,0 +1,83 @@
+//Validação de informações
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		boolean infoValida = false;
+		
+		do {
+		    
+		    System.out.println("Informe um nome: ");
+		    String nome = scan.next();
+		    
+		    if (nome.length() >= 3){
+		        infoValida = true;
+		    } else {
+		        System.out.println("Nome inválido, digite novamente");
+		    }
+		} while (!infoValida);
+		
+		infoValida = false;
+		
+		do {
+		    
+		    System.out.println("Informe a idade: ");
+		    int idade = scan.nextInt();
+		    
+		    if (idade >= 0 && idade <= 150){
+		        infoValida = true;
+		    } else {
+		        System.out.println("Idade inválido, digite novamente");
+		    }
+		} while (!infoValida);
+		
+		infoValida = false;
+		
+		do {
+		    
+		    System.out.println("Informe o salário: ");
+		    double salario = scan.nextDouble();
+		    
+		    if (salario > 0){
+		        infoValida = true;
+		    } else {
+		        System.out.println("Salário inválido, digite novamente");
+		    }
+		} while (!infoValida);
+		
+		infoValida = false;
+		
+		do {
+		    
+		    System.out.println("Informe o sexo: ");
+		    String sexo = scan.next();
+		    
+		    if (sexo.equalsIgnoreCase("f") || sexo.equalsIgnoreCase("m")){
+		        infoValida = true;
+		    } else {
+		        System.out.println("Sexo inválido, digite novamente");
+		    }
+		} while (!infoValida);
+		
+		infoValida = false;
+		
+		do {
+		    
+		    System.out.println("Informe o estado civil: ");
+		    String estadoCivil = scan.next();
+		    
+		    if (estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c") || estadoCivil.equalsIgnoreCase("v") || estadoCivil.equalsIgnoreCase("d")){
+		        infoValida = true;
+		    } else {
+		        System.out.println("Estado civil inválido, digite novamente");
+		    }
+		    
+		} while (!infoValida);
+	}
+}
