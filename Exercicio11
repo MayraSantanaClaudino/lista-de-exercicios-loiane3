@@ -1,0 +1,26 @@
+//Extensão do exercicio anterior
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe um número inteiro:");
+		int num1 = scan.nextInt();
+		System.out.println("Informe outro número inteiro:");
+		int num2 = scan.nextInt();
+		
+    int soma = 0;
+    
+		for (int i = num1; i <= num2; i++){
+		    soma += i;
+		}
+		
+    System.out.println(soma);
+    
+	}
+}

@@ -1,0 +1,44 @@
+//Maior valor, menor valor e soma dos valores dada uma sequência n de números
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	Scanner scan = new Scanner(System.in);
+    	int a = 0, maior = 0, menor = 0;
+    	double soma = 0;
+    	
+    	System.out.println("Informe um número:");
+    	int n = scan.nextInt();
+    
+    	for(int i = 0; i < n; i++){ 
+		
+		System.out.println("Insira o valor " + (i + 1));
+		a = scan.nextInt();
+		
+		soma += a;
+		
+		if(i == 0){
+			
+			maior = a;
+			menor = a;
+		}
+		
+		if(a > maior){
+			
+			maior = a;
+		}
+		
+		if(a < menor){
+			
+			menor = a;
+		}
+	}
+	
+	System.out.print("Maior: " + maior + " Menor: " + menor + " Soma: " + soma);
+	
+    }  
+}
