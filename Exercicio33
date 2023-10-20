@@ -1,0 +1,40 @@
+//Média das temperaturas e maior e menor temperatura
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe a quantidade de temperaturas registradas:");
+		int qtdTemperaturas = scan.nextInt();
+		
+		double temperatura;
+		double soma = 0;
+		double menor = Double.MAX_VALUE;
+		double maior = Double.MIN_VALUE;
+		
+		for (int i = 1; i <= qtdTemperaturas; i++){
+		    System.out.println("Informe a temperatura do dia " + i);
+		    temperatura = scan.nextDouble();
+		    
+		    soma += temperatura;
+		    if (temperatura > maior){
+		        maior = temperatura;
+		    }
+		    
+		    if (temperatura < menor){
+		        menor = temperatura;
+		    }
+		}
+		
+		double media = soma / qtdTemperaturas;
+		System.out.println("Média das temperaturas: " + media);
+		System.out.println("Menor temperatura registrada: " + menor);
+		System.out.println("Maior temperatura registrada: " + maior);
+		
+	}
+}

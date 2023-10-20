@@ -1,0 +1,25 @@
+//Cálculo do salário
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		double salario = 1000;
+		
+		double percentual = 1.5;
+		
+		salario += (salario / 100) * percentual;
+		
+		for (int i = 1997; i <= 2023; i++){
+		    percentual *= 2;
+		    salario = (salario / 100) * percentual;
+		    System.out.println(i + " = " + salario + " - " + percentual + "%");
+		}
+		
+	}
+}

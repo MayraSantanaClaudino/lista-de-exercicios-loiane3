@@ -1,0 +1,40 @@
+//Tabuada
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		boolean invalido = true;
+		int num, numFinal, numInicio;
+		
+		do {
+		    
+		    System.out.println("Informe o número para gerar a tabuada:");
+		    num = scan.nextInt();
+		    System.out.println("Informe o número inicial da tabuada:");
+		    numInicio = scan.nextInt();
+		    System.out.println("Informe o número final da tabuada:");
+		    numFinal = scan.nextInt();
+		    
+		    if (numFinal > numInicio){
+		        invalido = false;
+		    }
+		    
+		} while (invalido);
+		
+		System.out.println("Tabuada de " + num + ":");
+		System.out.println("Começar por: " + numInicio);
+		System.out.println("Terminar em: " + numFinal);
+		System.out.println();
+		
+		for (int i = numInicio; i <= numFinal; i++){
+		    System.out.println(num + " * " + i + " = " + (num * i));
+		}
+		
+	}
+}
