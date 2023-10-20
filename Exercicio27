@@ -1,0 +1,43 @@
+//Cálculo do número médio de alunos por turma
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Informe o número de turmas:");
+		int turmas = scan.nextInt();
+		
+		int alunos;
+		int soma = 0;
+		boolean invalido = true;
+		
+		for (int i = 1; i <= turmas; i++){
+		    
+		    invalido = true;
+		    do {
+		        
+		        System.out.println("Informe o número de alunos da turma " + i);
+		        alunos = scan.nextInt();
+		        
+		        if (alunos <= 40){
+		            invalido = false;
+		        } else {
+		            System.out.println("Números de alunos inválido, digite novamente");
+		        }
+		        
+		    } while(invalido);
+		    
+		    soma += alunos;
+		    
+		}
+		
+		double media = soma / turmas; 
+		System.out.println("Média de alunos por turma: " + media);
+		
+	}
+}

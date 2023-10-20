@@ -1,0 +1,60 @@
+//Caixa registradora
+//May Santana, 2023
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scan = new Scanner(System.in);
+		
+		//System.out.println("Lojas Tabajara");
+		
+		boolean sair = false;
+		String compra;
+		int produtos;
+		double preco;
+		double total;
+		String output;
+		double valorPago;
+		double troco;
+		
+		do {
+		    
+		    System.out.println("Deseja informar uma nova compra? (S/N)");
+		    compra = scan.next();
+		    
+		    if (compra.equalsIgnoreCase("s")){
+		        output = "Lojas Tabajara\n";
+		        System.out.println("Informe a quantidade de produtos:");
+		        produtos = scan.nextInt();
+		        
+		        total = 0;
+		        
+		        for (int i = 1; i <= produtos; i++){
+		            System.out.println("Informe o preço do produto " + i);
+		            preco = scan.nextDouble();
+		            total += preco;
+		            output += "Produto " + i + " : R$ " + preco + "\n";
+		        }
+		        
+		        output += "Total: R$ " + total;
+		        System.out.println("Total: R$ " + total);
+		        System.out.println("Entre com o valor pago:");
+		        valorPago = scan.nextDouble();
+		        output += "\nDinheiro: R$ " + valorPago + "\n";
+		        troco = valorPago - total;
+		        output += "Troco: R$ " + troco;
+		        System.out.println(output);
+		        
+		    } else {
+		        sair = true;
+		    }
+		    
+		    
+		    
+		} while (!sair);
+		
+	}
+}
